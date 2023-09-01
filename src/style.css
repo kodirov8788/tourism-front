@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  background: url("./images/image-17.jpg") no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 50vh;
+  background-position: center;
+  object-fit: cover;
+}
+.footer{
+    background: url("./images/image-27.jpg") no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 200px;
+}
+.bizHaqimizda{
+  background: url("./images/BizHaqimizda.jpg") no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 32vh;
+  background-position: center;
+}
