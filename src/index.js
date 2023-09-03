@@ -5,17 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Redirectbybtn from './Redirectbybtn';
+import Navbar from './components/navbar/Navbar';
+import Paketlar from './pages/Paketlar/Paketlar';
+import Boglanish from "./pages/bog'lanish/Boglanish"
+import BizHaqimizdaHeader from './components/BizHaqimizda_Header/BizHaqimizdaHeader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path='/pay' element={<App />} />
-        <Route path='/' element={<Redirectbybtn />} />
+        {/* <Route path='/pay' element={<App />} />
+     <Route path='/' element={<Redirectbybtn />} /> */}
+        <Route path='/' element={<App />} />
+        <Route path='/paketlar' element={<Paketlar />} />
+        <Route path='/boglanish' element={<Boglanish />} />
+        <Route path='/biz-haqimizda' element={<BizHaqimizdaHeader />} />
 
         <Route path='*' element={<h1 className='text-center mt-10 text-5xl font-bold'>404 || Pages not found</h1>} />
-
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
