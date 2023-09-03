@@ -1,6 +1,6 @@
 import React from "react";
-import WhatsApp from "../../images/whatsapp.png";
-import Telegram from "../../images/telegram.png";
+import WhatsApp from "../images/whatsapp.png";
+import Telegram from "../images/telegram.png";
 
 function BizHaqimizdaHeader() {
   return (

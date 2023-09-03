@@ -1,5 +1,5 @@
 import React from "react";
-import { Turistik_paketlar } from "../../static_data";
+import { Turistik_paketlar } from "../static_data";
 
 function Turistik() {
   return (

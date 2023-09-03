@@ -1,9 +1,9 @@
-import Img1 from "../../images/image-21.jpg";
-import Img2 from "../../images/image-22.jpg";
-import Img3 from "../../images/image-23.jpg";
-import Img4 from "../../images/image-24.jpg";
-import Img5 from "../../images/image-25.jpg";
-import Img6 from "../../images/image26.jpg";
+import Img1 from "../images/image-21.jpg";
+import Img2 from "../images/image-22.jpg";
+import Img3 from "../images/image-23.jpg";
+import Img4 from "../images/image-24.jpg";
+import Img5 from "../images/image-25.jpg";
+import Img6 from "../images/image26.jpg";
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';

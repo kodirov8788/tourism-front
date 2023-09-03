@@ -1,12 +1,12 @@
 import React from "react";
-import Img1 from "../../images/image-2.jpg";
-import Img2 from "../../images/IMAGE-18.jpg";
-import Img3 from "../../images/image-12.jpg";
-import Img4 from "../../images/image-15.jpg";
-import Img5 from "../../images/image-16.png";
-import Img6 from "../../images/IMAGE-19.jpg";
-import Img7 from "../../images/image-4.jpg";
-import Img8 from "../../images/image-3.jpg";
+import Img1 from "../images/image-2.jpg";
+import Img2 from "../images/IMAGE-18.jpg";
+import Img3 from "../images/image-12.jpg";
+import Img4 from "../images/image-15.jpg";
+import Img5 from "../images/image-16.png";
+import Img6 from "../images/IMAGE-19.jpg";
+import Img7 from "../images/image-4.jpg";
+import Img8 from "../images/image-3.jpg";
 
 function Xizmatlar() {
   return (

@@ -5,10 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Redirectbybtn from './Redirectbybtn';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/Navbar';
 import Paketlar from './pages/Paketlar/Paketlar';
 import Boglanish from "./pages/bog'lanish/Boglanish"
-import BizHaqimizdaHeader from './components/BizHaqimizda_Header/BizHaqimizdaHeader';
+import BizHaqimizdaHeader from './components/BizHaqimizdaHeader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

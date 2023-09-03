@@ -1,21 +1,21 @@
 import React from 'react'
-import Footer from "../../components/Footer/Footer";
-import Slider from "../../components/Slider/Slider";
-import Turistik from "../../components/Turistik paketlar/Turistik";
-import Header from "../../components/header/Header";
-import Main from "../../components/main/Main";
-import Navbar from "../../components/navbar/Navbar";
-import Xizmatlar from "../../components/xizmatlar/Xizmatlar";
+import Footer from "../../components/Footer";
+import Slider from "../../components/Slider";
+import Turistik from "../../components/Turistik";
+import Header from "../../components/Header";
+import Main from "../../components/Main";
+import Navbar from "../../components/Navbar";
+import Xizmatlar from "../../components/Xizmatlar";
 
 function BoshSaxifa() {
   return (
     <div>
-        <Header/>
-        <Main/>
-        <Xizmatlar/>
-        <Turistik/>
-        <Slider/>
-        <Footer/>        
+      <Header />
+      <Main />
+      <Xizmatlar />
+      <Turistik />
+      <Slider />
+      <Footer />
     </div>
   )
 }
