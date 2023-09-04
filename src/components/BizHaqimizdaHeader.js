@@ -4,7 +4,7 @@ import Telegram from "../images/telegram.png";
 
 function BizHaqimizdaHeader() {
   return (
-    <div>
+    <div className="">
       <div className="bizHaqimizda flex justify-center items-center">
         <h1 className="text-4xl text-white font-bold font-sans">
           Biz haqimizda

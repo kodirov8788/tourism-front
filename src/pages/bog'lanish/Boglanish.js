@@ -13,41 +13,26 @@ function Boglanish() {
         <div className='w-[90%] m-auto   my-[30px] md:flex  md:justify-between   ' >
           {/* form */}
           <div className='sm:w-[90%]   md:w-[48%] overflow-auto h-[1000px] touch-auto'>
-          <div className="">
-      <div className='w-[95%]    border-t-[#3D8F2D] border-t-[15px]  rounded-t-xl bg-[white] '>
-              <h1 className='text-4xl w-[90%]  ml-[20px] my-[20px]'>
-                Bog'lanish uchun (let us contact you)
-              </h1>
+            <div className="">
+              <div className='w-[95%]    border-t-[#3D8F2D] border-t-[15px]  rounded-t-xl bg-[white] '>
 
-              <div className='w-full  border-2   border-b-[#ccc] border-t-[#ccc]  '>
-                <div className=' w-[94%]    m-auto  py-[15px]  flex justify-between md:flex-col lg:flex-row' >
-                  <div>
-                    <p>abdullosaydullayev8@gmail.com  <a href='#' className='text-blue-500'>Сменить аккаунт</a> </p>
-                    <p className=' flex  items-center '>
-                      < GoMail /> <span className='ml-4  text-md font-sans '>Совместный доступ отсутствует</span>
-                    </p>
+
+                <div className='w-full  border-2   border-b-[#ccc] border-t-[#ccc]  '>
+                  <div className=' w-[94%]    m-auto  py-[15px]  flex justify-between md:flex-col lg:flex-row' >
                   </div>
 
-                  <div>
-                    <i className=''>
-                      < FaCloud />
-                    </i>
-                  </div>
 
                 </div>
-
+                <p className="text-red-600 py-[15px] pl-[20px] text-md" >*Обязательный вопрос</p>
 
               </div>
-              <p className="text-red-600 py-[15px] pl-[20px] text-md" >*Обязательный вопрос</p>
-
             </div>
-          </div>
 
-            
+
 
             <div className='mt-[30px] w-[95%] relative'>
               <form action="">
-                    <div className=' absolute w-[50px] h-[50px] bg-gray-400  hidden  '><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJobXVXYiIgdmlld0JveD0iMCAwIDI0IDI0IiBmb2N1c2FibGU9ImZhbHNlIj48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE5IDE5SDVWNWg3VjNINWMtMS4xMSAwLTIgLjktMiAydjE0YzAgMS4xLjg5IDIgMiAyaDE0YzEuMSAwIDItLjkgMi0ydi03aC0ydjd6TTE0IDN2MmgzLjU5bC05LjgzIDkuODMgMS40MSAxLjQxTDE5IDYuNDFWMTBoMlYzaC03eiIvPjwvc3ZnPg==" alt="" /></div>
+                <div className=' absolute w-[50px] h-[50px] bg-gray-400  hidden  '><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJobXVXYiIgdmlld0JveD0iMCAwIDI0IDI0IiBmb2N1c2FibGU9ImZhbHNlIj48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE5IDE5SDVWNWg3VjNINWMtMS4xMSAwLTIgLjktMiAydjE0YzAgMS4xLjg5IDIgMiAyaDE0YzEuMSAwIDItLjkgMi0ydi03aC0ydjd6TTE0IDN2MmgzLjU5bC05LjgzIDkuODMgMS40MSAxLjQxTDE5IDYuNDFWMTBoMlYzaC03eiIvPjwvc3ZnPg==" alt="" /></div>
                 <div className=' bg-[white] mt-[18px]  h-[160px] pl-[20px]  flex flex-col justify-evenly rounded-xl '>
                   <h1 className='text-2xl'>
                     Ism(name)*
@@ -148,8 +133,8 @@ function Boglanish() {
           <div className='w-[90%] h-[240px] sm:flex sm:items-center m-auto  md:px-[30px] border-b-2 border-b-gray-300'>
             <img className='w-[65%] h-[160px] md:w-[50%] md:h-[100px] sm:m-auto lg:h-[130px] lg:w-[50%] ' src="https://lh4.googleusercontent.com/_XLpM12hKQnwBbp1OGyABfftPMWuLSwEf7x4BIXVK9QBAr9Unp9aKK9_F6wg6_aPre8qXp9GMb53nDjiVnPKZSZfwI9nJWYJrSeLsUNYBqYrcyjPVJka29GOq6NwyewX3A=w1280" alt="" />
           </div>
-          
-            <p className='text-center my-[15px] text-black lg:text-md'>Al-Rashid Tourism 2023</p>
+
+          <p className='text-center my-[15px] text-black lg:text-md'>Al-Rashid Tourism 2023</p>
 
         </div>
 

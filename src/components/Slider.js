@@ -19,6 +19,10 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 
 export default function App() {
+
+  const style = {
+    img: "w-full h-full object-cover "
+  }
   return (
     <>
       <Swiper
@@ -30,14 +34,14 @@ export default function App() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="xl:w-[1200px] xl:h-[700px] lg:w-[1000px] sm:h-[400px] md:h-[550px] md:w-[700px] sm:w-[500px]"
+        className=" xl:h-[700px]  sm:h-[400px] md:h-[550px] sm:w-[500px] md:w-[700px] lg:w-[1000px] xl:w-[1200px]"
       >
-        <SwiperSlide><img className="w-[100%] h-[100%]" src={Img1} alt="" /></SwiperSlide>
-        <SwiperSlide><img className="w-[100%] h-[100%]" src={Img2} alt="" /></SwiperSlide>
-        <SwiperSlide><img className="w-[100%] h-[100%]" src={Img3} alt="" /></SwiperSlide>
-        <SwiperSlide><img className="w-[100%] h-[100%]" src={Img4} alt="" /></SwiperSlide>
-        <SwiperSlide><img className="w-[100%] h-[100%]" src={Img5} alt="" /></SwiperSlide>
-        <SwiperSlide><img className="w-[100%] h-[100%]" src={Img6} alt="" /></SwiperSlide>
+        <SwiperSlide><img className={style.img} src={Img1} alt="" /></SwiperSlide>
+        <SwiperSlide><img className={style.img} src={Img2} alt="" /></SwiperSlide>
+        <SwiperSlide><img className={style.img} src={Img3} alt="" /></SwiperSlide>
+        <SwiperSlide><img className={style.img} src={Img4} alt="" /></SwiperSlide>
+        <SwiperSlide><img className={style.img} src={Img5} alt="" /></SwiperSlide>
+        <SwiperSlide><img className={style.img} src={Img6} alt="" /></SwiperSlide>
       </Swiper>
     </>
   );

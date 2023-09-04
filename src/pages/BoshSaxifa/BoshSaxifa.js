@@ -4,8 +4,8 @@ import Slider from "../../components/Slider";
 import Turistik from "../../components/Turistik";
 import Header from "../../components/Header";
 import Main from "../../components/Main";
-import Navbar from "../../components/Navbar";
 import Xizmatlar from "../../components/Xizmatlar";
+import Boglanish from '../bog\'lanish/Boglanish';
 
 function BoshSaxifa() {
   return (
@@ -15,6 +15,7 @@ function BoshSaxifa() {
       <Xizmatlar />
       <Turistik />
       <Slider />
+      <Boglanish />
       <Footer />
     </div>
   )

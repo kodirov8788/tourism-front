@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation, Pagination, Scrollbar, A11y , Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -32,7 +32,7 @@ import paketlar_img23 from "./Paketlar_img/paketlar_img23.jpg"
 function Paketlar() {
   return (
 
-    <div className='bg-[#D5E4D9]'>
+    <div className='bg-[#D5E4D9] '>
 
       {/* Main qismi */}
       <div className='w-[100%] h-[340px] relative flex items-center justify-center font-sans'>
@@ -129,19 +129,19 @@ function Paketlar() {
       <div className="w-[100%] h-[750px] pt-[20px] p-[50px]">
         <Swiper
           // install Swiper modules
-          modules={[ Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        className="mySwiper"
-      >
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          className="mySwiper"
+        >
           <SwiperSlide><img className='w-[100%] h-[700px] object-cover' src={paketlar_img2} alt="" /></SwiperSlide>
           <SwiperSlide><img className='w-[100%] h-[700px] object-cover' src={paketlar_img3} alt="" /></SwiperSlide>
           <SwiperSlide><img className='w-[100%] h-[700px] object-cover' src={paketlar_img4} alt="" /></SwiperSlide>
@@ -166,16 +166,16 @@ function Paketlar() {
           <SwiperSlide><img className='w-[100%] h-[700px] object-cover' src={paketlar_img23} alt="" /></SwiperSlide>
         </Swiper>
       </div>
-      {/* Slider qismi */}  
+      {/* Slider qismi */}
 
 
-        {/* Footer qismi */}
+      {/* Footer qismi */}
       <div className="w-[100%] h-[150px] p-[50px]">
         <div className="w-[100%] h-[100px] flex items-center justify-center  text-[16px] font-normal text-[#1c1c1c]  border-t-2 border-slate-300 ">
           <h1>Al-Rashid Tourism 2023</h1>  </div>
-          </div>
       </div>
-       
+    </div>
+
   )
 }
 
