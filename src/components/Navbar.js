@@ -2,17 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useAuthContext } from "../hooks/useAuthContext";
+import axios from "../api/Axios";
 
 function Navbar() {
   const [modal, setModal] = useState(false);
   const [bgColor, setBgColor] = useState(false);
   const [navNavPathname, setNavPathname] = useState("");
-
+  const { user, dispatch } = useAuthContext()
   const pathname = useLocation().pathname
   const showModal = () => {
     setModal(!modal);
   };
-  console.log(bgColor)
+  // console.log(bgColor)
 
 
   useEffect(() => {
@@ -21,7 +23,9 @@ function Navbar() {
     }
     ChangeRoute()
   }, [pathname])
+
   let Scroll = window.scrollY
+
   useEffect(() => {
     const ChangeRoute = () => {
       window.addEventListener("scroll", () => {
@@ -35,6 +39,12 @@ function Navbar() {
     }
     ChangeRoute()
   }, [Scroll])
+
+  const logout = () => {
+    localStorage.removeItem('user')
+    dispatch({ type: 'LOGOUT' })
+  }
+
 
 
   return (
@@ -91,6 +101,16 @@ function Navbar() {
           <li className=" w-28 text-center">
             <Link className={` ${navNavPathname == "/biz-haqimizda" ? "font-bold" : ""}`} to={"biz-haqimizda"}>Biz haqimizda</Link>
           </li>
+
+          {user ? <>
+            <li className=" w-28 text-center">
+              <Link className={` ${navNavPathname == "/admin" ? "font-bold" : ""}`} to={"admin"}>Admin paneli</Link>
+            </li>
+            <button className=" w-28 text-center " onClick={logout}>logout</button>
+          </> : <li className=" w-28 text-center">
+            <Link className={` ${navNavPathname == "/login" ? "font-bold" : ""}`} to={"login"}>Log In</Link>
+          </li>}
+
           <li>
             <AiOutlineSearch />
           </li>

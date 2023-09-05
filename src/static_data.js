@@ -13,7 +13,7 @@ export const Turistik_paketlar = [
         id: 1,
         img: Img1,
         text: "O'zbekiston bo'ylab sayohat",
-        price: "4,800,000 uzs",
+        price: "4800000",
     },
     {
         id: 2,
