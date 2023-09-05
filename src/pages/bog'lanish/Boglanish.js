@@ -1,11 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { GoMail } from "react-icons/go";
 import { FaCloud } from "react-icons/fa6";
+import axios from '../../api/Axios';
+import { useNavigate } from 'react-router-dom';
 
 function Boglanish() {
+  const navigate = useNavigate()
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    address: "",
+    number: "",
+    commit: ""
+  })
+  // console.log(userData)
+
+  const ClearForm = () => {
+    return setUserData({
+      name: "",
+      email: "",
+      address: "",
+      number: "",
+      commit: ""
+    })
+  }
+  const formRequest = (e) => {
+    e.preventDefault()
+    const postData = async () => {
+      await axios.post("client/create", {
+        name: userData.name,
+        email: userData.email,
+        address: userData.address,
+        number: userData.number,
+        commit: userData.commit,
+      })
+        .then(res => {
+          console.log(res)
+          navigate("/")
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
+    postData()
+  }
   return (
     <div>
 
+      <div className="w-full h-[40vh] bg-bgimage bg-cover  bg-center relative flex items-center justify-center ">
+        <div className="w-full h-full bg-black/30 absolute left-0 top-0">
+
+        </div>
+        <h1 className='text-center text-white text-3xl md:text-5xl font-bold z-20'>Biz bilan bog'lanish</h1>
+
+      </div>
       {/* main */}
       <div className='w-full bg-[#D5E4D9]  pt-[20px]'>
         <p className='w-[95%] m-auto   border-[2px]  bg-[B5C2B9] ' ></p>
@@ -31,23 +79,23 @@ function Boglanish() {
 
 
             <div className='mt-[30px] w-[95%] relative'>
-              <form action="">
+              <form action="" onSubmit={formRequest}>
                 <div className=' absolute w-[50px] h-[50px] bg-gray-400  hidden  '><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJobXVXYiIgdmlld0JveD0iMCAwIDI0IDI0IiBmb2N1c2FibGU9ImZhbHNlIj48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTE5IDE5SDVWNWg3VjNINWMtMS4xMSAwLTIgLjktMiAydjE0YzAgMS4xLjg5IDIgMiAyaDE0YzEuMSAwIDItLjkgMi0ydi03aC0ydjd6TTE0IDN2MmgzLjU5bC05LjgzIDkuODMgMS40MSAxLjQxTDE5IDYuNDFWMTBoMlYzaC03eiIvPjwvc3ZnPg==" alt="" /></div>
                 <div className=' bg-[white] mt-[18px]  h-[160px] pl-[20px]  flex flex-col justify-evenly rounded-xl '>
                   <h1 className='text-2xl'>
                     Ism(name)*
                   </h1>
                   <div className=" w-1/2 h-[30px] mb-[15px]   ">
-                    <input className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="text" placeholder='Мой ответ' />
+                    <input value={userData.name} className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="text" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, name: e.target.value })} />
                   </div>
                 </div>
 
                 <div className=' bg-[white] mt-[18px]  h-[160px] pl-[20px]  flex flex-col justify-evenly rounded-xl '>
                   <h1 className='text-2xl'>
-                    Elektron pochta manzili(e mail)*
+                    Elektron pochta manzili(email)*
                   </h1>
                   <div className=" w-1/2 h-[30px] mb-[15px]   ">
-                    <input className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="email" placeholder='Мой ответ' />
+                    <input value={userData.email} className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="email" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, email: e.target.value })} />
                   </div>
                 </div>
 
@@ -56,7 +104,7 @@ function Boglanish() {
                     Telefon raqam(mobile number)
                   </h1>
                   <div className=" w-1/2 h-[30px] mb-[15px]   ">
-                    <input className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="text" placeholder='Мой ответ' />
+                    <input value={userData.number} className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="number" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, number: e.target.value })} />
                   </div>
                 </div>
 
@@ -65,15 +113,15 @@ function Boglanish() {
                     Izoh(inquiry service)
                   </h1>
                   <div className=" w-[95%] h-[30px] mb-[15px]   ">
-                    <input className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="text" placeholder='Мой ответ' />
+                    <input value={userData.commit} className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="text" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, commit: e.target.value })} />
                   </div>
                 </div>
 
                 {/* button */}
 
-                <div className='w-full border-2 border-black h-[70px] flex justify-between items-center '>
+                <div className='w-full  h-[70px] flex justify-between items-center '>
                   <button className='h-[40px] border rounded-lg w-[140px] text-[16px] bg-[rgb(41,137,4)] text-white hover:bg-[rgb(50,153,9)]'>Отправить</button>
-                  <button className='h-[40px] border w-[140px] text-[16px] bg-transparent text-[#298904] font-normal hover:bg-[#D0E0DB]'>Очистить форму</button>
+                  <button onClick={ClearForm} type='button' className='h-[40px] border w-[140px] text-[16px] bg-transparent text-[#298904] font-normal hover:bg-[#D0E0DB]'>Очистить форму</button>
                 </div>
 
 

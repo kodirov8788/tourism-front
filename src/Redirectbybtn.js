@@ -7,13 +7,7 @@ function Redirectbybtn() {
   // const amount = 1000;
 
 
-  // useEffect(() => {
-  //   const getApi = async () => {
-  //     await axios.get(`https://my.click.uz/services/pay?service_id=${serviceId}&merchant_id=${merchantId}&amount=${amount}&transaction_param=${transactionParam}`)
-  //       .then(res => console.log(res)).catch(err => console.log(err))
-  //   }
-  //   getApi()
-  // }, [])
+
   const redirectToPaymentPage = () => {
     const merchantId = '21689';
     const serviceId = '29374';

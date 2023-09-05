@@ -35,7 +35,7 @@ import paketlar_img20 from "./Paketlar_img/paketlar_img20.jpeg";
 import paketlar_img21 from "./Paketlar_img/paketlar_img21.jpg";
 import paketlar_img22 from "./Paketlar_img/paketlar_img22.jpg";
 import paketlar_img23 from "./Paketlar_img/paketlar_img23.jpg";
-import { Paketlar_data } from "../../static_data";
+import { Turistik_paketlar } from "../../static_data";
 import { Link } from "react-router-dom";
 
 function Paketlar() {
@@ -55,20 +55,20 @@ function Paketlar() {
       {/* Main qismi */}
 
       {/* shaharlar  */}
-      {Paketlar_data.map((paket) => (
+      {Turistik_paketlar.map((paket) => (
         <div
           className="sm:w-[100%] sm:h-[509px] md:h-[250px] xl:h-[310px] xl:w-[87%] md:flex"
           key={paket.id}
         >
           <div className="sm:w-[100%] sm:h-[325px]  sm:flex sm:items-center sm:justify-center lg:justify-end p-[40px]">
-            <div className="xl:w-[463px] xl:h-[260px] lg:w-[390px] md:w-[70%] sm:w-[76%] sm:h-[277px] ">
-              <img src={paket.img} alt="" />
+            <div className="w-[300px] h-[250px] object-cover md:w-[400px] md:h-[280px]">
+              <img src={paket.img} className="w-full h-full" alt="" />
             </div>
           </div>
-          <div className="sm:w-[100%] sm:h-[183px] sm:flex sm:flex-col sm:justify-center md:p-0  sm:pl-5">
+          <div className="text-center sm:w-[100%] sm:h-[183px] sm:flex sm:flex-col sm:justify-center md:p-0  sm:pl-5">
             <Link to={`${paket.id}`}>
               <h1 className="sm:text-[40px] text-[#1B4557] sm:font-bold sm:underline sm:leading-[100px]">
-                {paket.title}
+                {paket.text}
               </h1>
               <p className="sm:text-[18px] text-[#1B4557] sm:font-semibold">
                 {paket.price}
@@ -84,7 +84,7 @@ function Paketlar() {
       </div>
 
       {/* Slider qismi */}
-      <div className="w-[100%] h-[750px] pt-[20px] p-[50px]">
+      <div className="w-[100%] h-[750px] pt-[20px] p-3 md:p-[50px]">
         <Swiper
           // install Swiper modules
           modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}

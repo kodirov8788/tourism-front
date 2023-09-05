@@ -14,7 +14,13 @@ function BoshSaxifa() {
       <Main />
       <Xizmatlar />
       <Turistik />
+      <div className="bg-[#1B4557] mb-5 w-full h-[120px] flex justify-center items-center ">
+        <h1 className='text-white font-bold text-2xl md:text-4xl tracking-[10px]'>GALEREYA</h1>
+      </div>
       <Slider />
+      <div className="bg-[#1B4557] mt-5 w-full h-[120px] flex justify-center items-center ">
+        <h1 className='text-white font-bold text-2xl md:text-4xl tracking-[5px]'>Biz bilan bog'lanish</h1>
+      </div>
       <Boglanish />
       <Footer />
     </div>
