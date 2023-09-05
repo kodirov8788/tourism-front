@@ -31,7 +31,13 @@ function Singlepage() {
 
         if (data) {
             const postData = async () => {
-                await axios.post("client/create", { name: userData.name, email: userData.email, address: userData.address, number: userData.number, trip: data })
+                await axios.post("client/create", {
+                    name: userData.name,
+                    email: userData.email,
+                    address: userData.address,
+                    number: userData.number,
+                    trip: data
+                })
                     .then(res => {
                         console.log(res)
                         navigate("/")
