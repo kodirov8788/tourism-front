@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useAuthContext } from "../hooks/useAuthContext";
@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const { t } = useTranslation();
+  const navigate = useNavigate()
   const [modal, setModal] = useState(false);
   const [bgColor, setBgColor] = useState(false);
   const [navNavPathname, setNavPathname] = useState("");
@@ -22,6 +23,7 @@ function Navbar() {
   useEffect(() => {
     const ChangeRoute = () => {
       setNavPathname(pathname)
+      setModal(false)
     }
     ChangeRoute()
   }, [pathname])
@@ -45,6 +47,8 @@ function Navbar() {
   const logout = () => {
     localStorage.removeItem('user')
     dispatch({ type: 'LOGOUT' })
+    navigate("/")
+
   }
 
 
@@ -72,6 +76,15 @@ function Navbar() {
               <li className="mt-5 ml-5">
                 <Link to={"biz-haqimizda"}>Biz haqimizda</Link>
               </li>
+
+              {user ? <>
+                <li className="mt-5 ml-5 ">
+                  <Link className={` ${navNavPathname == "/admin" ? "font-bold" : ""}`} to={"admin"}>Admin paneli</Link>
+                </li>
+                <button className="mt-5 ml-5 " onClick={logout}>logout</button>
+              </> : <li className="mt-5 ml-5 ">
+                <Link className={` ${navNavPathname == "/login" ? "font-bold" : ""}`} to={"login"}>Log In</Link>
+              </li>}
               <li className="mt-5 ml-5">
                 <AiOutlineSearch />
               </li>

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Turistik_paketlar } from "../../static_data";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "../../api/Axios";
 import { toast } from "react-toastify";
+import { AuthContext } from "../../context/AuthContext";
 function Singlepage() {
-
+  let { setIsLoading } = useContext(AuthContext)
   let param = useParams();
   let navigate = useNavigate();
   const [data, setData] = useState(null);
@@ -21,33 +22,40 @@ function Singlepage() {
 
   const [userData, setUserData] = useState({
     name: "",
-    lastname: "",
+    email: "",
     address: "",
     number: "",
   });
-  console.log(data);
-  console.log(userData);
+  // console.log(data);
+  // console.log(userData);
 
   const formRequest = (e) => {
     e.preventDefault();
-
-
+    setIsLoading(true)
+    // console.log("first")
     if (data) {
       const postData = async () => {
         await axios
           .post("client/create", {
             name: userData.name,
-            lastname: userData.lastname,
+            email: userData.email,
             address: userData.address,
             number: userData.number,
             trip: data,
           })
           .then((res) => {
-            console.log(res);
+            toast.success("ma'lumot qo'shildi!", {
+              position: toast.POSITION.TOP_RIGHT
+            });
             navigate("/");
+            setIsLoading(false)
           })
           .catch((err) => {
             console.log(err);
+            toast.error("serverda error", {
+              position: toast.POSITION.TOP_RIGHT
+            });
+            setIsLoading(false)
           });
       };
       postData();
@@ -120,15 +128,15 @@ function Singlepage() {
           onChange={(e) => setUserData({ ...userData, name: e.target.value })}
         />
         <label className={style.label} htmlFor="lastname">
-          Familiya
+          Email
         </label>
         <input
           required
           className={style.input}
-          type="text"
+          type="email"
           name="lastname"
           onChange={(e) =>
-            setUserData({ ...userData, lastname: e.target.value })
+            setUserData({ ...userData, email: e.target.value })
           }
         />
         <label className={style.label} htmlFor="number">

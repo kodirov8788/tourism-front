@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import BoshSaxifa from "./pages/BoshSaxifa/BoshSaxifa";
 import { Navigate, Route, Routes } from "react-router-dom";
@@ -11,20 +11,24 @@ import Singlepage from './pages/SinglePage/Singlepage';
 import Admin from './pages/admin/Admin';
 import { useAuthContext } from "./hooks/useAuthContext";
 import Login from "./pages/Login";
+import ReactLoading from "react-loading";
+import { AuthContext } from "./context/AuthContext";
 function App() {
   const { user } = useAuthContext()
-  console.log(user)
+  const { isLoading } = useContext(AuthContext)
   return (
     <div className="">
+      {isLoading ? <div className="top-0 left-0 w-full fixed  h-screen bg-black/50 z-20 flex justify-center items-center">
+        <ReactLoading type={"spokes"} width={"100px"} color="white" className="absolute text-[40px]" />
+      </div> : <></>}
+
       <Routes>
-        {/* <Route path='/pay' element={<App />} />
-     <Route path='/' element={<Redirectbybtn />} /> */}
+
         <Route path='/' element={<BoshSaxifa />} />
         <Route path='/paketlar' element={<Paketlar />} />
         <Route path='/paketlar/:id' element={< Singlepage />} />
         <Route path='/boglanish' element={<Boglanish />} />
         <Route path='/biz-haqimizda' element={<BizHaqimizdaHeader />} />
-        <Route path='/admin' element={<Admin />} />
         <Route
           path="/login"
           element={!user ? <Login /> : <Navigate to="/" />}

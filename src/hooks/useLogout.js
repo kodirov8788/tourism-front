@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from './useAuthContext'
 import { toast } from 'react-toastify';
 
@@ -14,6 +15,7 @@ export const useLogout = () => {
     toast.success("Muvaffaqqiyatli saytdan chiqdingiz!", {
       position: toast.POSITION.TOP_RIGHT
     });
+
   }
 
   return { logout }

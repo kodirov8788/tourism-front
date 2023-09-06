@@ -21,7 +21,7 @@ const Login = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center mb-10 h-screen border">
+    <div className="flex flex-col items-center justify-center mb-10 bg-blue-400 h-screen border">
       <h1 className="font-bold text-2xl">Admin panel</h1>
       <form className="login w-4/5" onSubmit={handleSubmit}>
         <h3>Saytga kirish</h3>

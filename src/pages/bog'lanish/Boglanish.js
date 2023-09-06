@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { GoMail } from "react-icons/go";
 import { FaCloud } from "react-icons/fa6";
 import axios from '../../api/Axios';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 function Boglanish() {
   const navigate = useNavigate()
+  let { setIsLoading } = useContext(AuthContext)
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -26,6 +28,7 @@ function Boglanish() {
   }
   const formRequest = (e) => {
     e.preventDefault()
+    setIsLoading(true)
     const postData = async () => {
       await axios.post("client/create", {
         name: userData.name,
@@ -37,10 +40,13 @@ function Boglanish() {
         .then(res => {
           // console.log(res)
           navigate("/")
+          setIsLoading(false)
           ClearForm()
         })
         .catch(err => {
           console.log(err)
+          setIsLoading(false)
+
         })
     }
     postData()
