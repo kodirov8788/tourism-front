@@ -27,8 +27,8 @@ const Footer = () => {
     window.location.href = paymentUrl;
   };
 
-  return (
-    <div className='footer h-full md:min-h-[200px] flex flex-col md:flex-row md:px-20 items-center object-cover justify-between text-white p-5 '>
+  return (<div className="footer object-cover">
+    <div className=' h-full md:min-h-[200px] flex flex-col md:flex-row md:px-20 items-center  justify-between text-white p-5 '>
 
 
       <form onSubmit={redirectToPaymentPage} className="w-4/5 md:w-2/5 text-lg md:flex items-center justify-around md:text-lg">
@@ -58,8 +58,10 @@ const Footer = () => {
         </div>
         <img className='w-20 h-20' src={Img} alt="" />
       </div>
-
     </div>
+    <p className='text-center my-[15px] text-white lg:text-md '>Al-Rashid Tourism 2023</p>
+
+  </div>
   )
 }
 

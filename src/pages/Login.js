@@ -21,9 +21,9 @@ const Login = () => {
   }
 
   return (
-    <div className="login">
-      <h1><span>ALGORITM-COIN</span>ga xush kelibsiz!</h1>
-      <form className="login" onSubmit={handleSubmit}>
+    <div className="flex flex-col items-center justify-center mb-10 h-screen border">
+      <h1 className="font-bold text-2xl">Admin panel</h1>
+      <form className="login w-4/5" onSubmit={handleSubmit}>
         <h3>Saytga kirish</h3>
         <label>Username:</label>
         <input

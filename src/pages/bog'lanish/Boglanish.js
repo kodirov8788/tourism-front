@@ -13,7 +13,7 @@ function Boglanish() {
     number: "",
     commit: ""
   })
-  // console.log(userData)
+  console.log(userData)
 
   const ClearForm = () => {
     return setUserData({
@@ -35,8 +35,9 @@ function Boglanish() {
         commit: userData.commit,
       })
         .then(res => {
-          console.log(res)
+          // console.log(res)
           navigate("/")
+          ClearForm()
         })
         .catch(err => {
           console.log(err)
@@ -174,15 +175,13 @@ function Boglanish() {
 
         </div>
 
-        <div className='w-full border border-red-500 mt-[-10px] '>
+        <div className='w-full  mt-[-10px] '>
           <div className='w-full '>
             <button className='h-[100px] w-full bg-[#387B5B] text-[#fff] sm:text-xl'>Onlayn to'lov turlari</button>
           </div>
-          <div className='w-[90%] h-[240px] sm:flex sm:items-center m-auto  md:px-[30px] border-b-2 border-b-gray-300'>
-            <img className='w-[65%] h-[160px] md:w-[50%] md:h-[100px] sm:m-auto lg:h-[130px] lg:w-[50%] ' src="https://lh4.googleusercontent.com/_XLpM12hKQnwBbp1OGyABfftPMWuLSwEf7x4BIXVK9QBAr9Unp9aKK9_F6wg6_aPre8qXp9GMb53nDjiVnPKZSZfwI9nJWYJrSeLsUNYBqYrcyjPVJka29GOq6NwyewX3A=w1280" alt="" />
-          </div>
 
-          <p className='text-center my-[15px] text-black lg:text-md'>Al-Rashid Tourism 2023</p>
+
+
 
         </div>
 

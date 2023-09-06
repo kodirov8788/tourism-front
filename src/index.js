@@ -6,8 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './language/i18n';
-
+import { ToastContainer } from 'react-toastify';
 import { AuthContextProvider } from './context/AuthContext';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +18,7 @@ root.render(
     <AuthContextProvider>
       <BrowserRouter>
         <Navbar />
+        <ToastContainer />
         <App />
       </BrowserRouter>
     </AuthContextProvider>

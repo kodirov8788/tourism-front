@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Turistik_paketlar } from "../../static_data";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "../../api/Axios";
+import { toast } from "react-toastify";
 function Singlepage() {
 
   let param = useParams();
   let navigate = useNavigate();
   const [data, setData] = useState(null);
+  const [selectData, setSelectData] = useState("");
   useEffect(() => {
     const getApi = async () => {
       let selected = await Turistik_paketlar.find(
@@ -59,9 +61,36 @@ function Singlepage() {
     label: "text-lg",
   };
 
+
+
+  const redirectToPaymentPage = (e) => {
+    if (selectData === "") {
+      console.log("sdas")
+
+      toast.info("Carta turini tanglang!", {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    } else {
+      const merchantId = '21689';
+      const serviceId = '29374';
+      const transactionParam = data.text;
+      const amount = data.real_price;
+      const returnUrl = 'https://www.al-rashidtourism.uz/';
+      const cardType = selectData; // or 'humo' or other appropriate value
+      const paymentUrl = `https://my.click.uz/services/pay?service_id=${serviceId}&merchant_id=${merchantId}&amount=${amount}&transaction_param=${transactionParam}&return_url=${returnUrl}&card_type=${cardType}`;
+      console.log(paymentUrl)
+      // Redirect the user to the payment page
+      window.location.href = paymentUrl;
+    }
+  };
+
+
   return (
     <div className="mt-[55px] pt-[20px] flex flex-col items-center">
-      <Link to={-1}>Back</Link>
+      <div className=" w-4/5 h-10">
+        <Link className="block bg-blue-500 w-fit px-3 py-2 rounded text-white" to={-1}>Back</Link>
+
+      </div>
 
       <img
         className="w-4/5 md:w-fit  mx-auto flex rounded h-[400px] object-contain  "
@@ -129,7 +158,17 @@ function Singlepage() {
           Malumotni jo`natish
         </button>
       </form>
-      {/* <button className='border text-lg bg-blue-500 text-white px-3 py-2 my-4 rounded active:scale-95' type='button'>to'lov qilish</button> */}
+      <div className="w-4/5 md:w-2/5 text-lg flex items-center justify-around md:text-lg">
+
+        <select onChange={(e) => setSelectData(e.target.value)} required className='bg-transparent border px-3 py-2 rounded' >
+          <option value="">To'lov carta turini tanglang!</option>
+          <option value="humo">Humo</option>
+          <option value="uzcard">Uzcard</option>
+        </select>
+        <button onClick={() => redirectToPaymentPage()} className='border text-lg bg-blue-500 text-white px-3 py-2 my-4 rounded active:scale-95' type='button'>to'lov qilish</button>
+
+      </div>
+
     </div>
   );
 }
