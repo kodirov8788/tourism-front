@@ -15,7 +15,7 @@ function App() {
   const { user } = useAuthContext()
   console.log(user)
   return (
-    <div className=" border-2 border-black">
+    <div className="">
       <Routes>
         {/* <Route path='/pay' element={<App />} />
      <Route path='/' element={<Redirectbybtn />} /> */}

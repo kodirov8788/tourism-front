@@ -7,11 +7,15 @@ function Header() {
   const data = [{ id: 0, label: "UZB" }, { id: 1, label: "RUS" }, { id: 2, label: "ENG" }, { id: 3, label: "ARAB" }];
   const { i18n } = useTranslation();
   const [selectedItem, setSelectedItem] = useState(data[0]);
-  console.log(selectedItem)
   const changeLanguage = (lng) => {
-    // i18n.changeLanguage(lng.label);
     i18n.changeLanguage(lng);
-    setSelectedItem(lng)
+
+    setTimeout(() => {
+      let lg = window.localStorage.getItem("i18nextLng")
+      setSelectedItem(lg)
+    }, 500);
+
+
   };
   return (
     <div className="backdrop-blur-md bg-black/25 w-[100%] h-[50vh]">

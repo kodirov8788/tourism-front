@@ -4,8 +4,10 @@ import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useAuthContext } from "../hooks/useAuthContext";
 import axios from "../api/Axios";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { t } = useTranslation();
   const [modal, setModal] = useState(false);
   const [bgColor, setBgColor] = useState(false);
   const [navNavPathname, setNavPathname] = useState("");
@@ -90,16 +92,16 @@ function Navbar() {
         </div>
         <ul className="lg:flex hidden items-center gap-3">
           <li className=" w-24 text-center">
-            <Link className={` ${navNavPathname == "/" ? "font-bold" : ""}`} to={"/"}>Bosh Sahifa</Link>
+            <Link className={` ${navNavPathname == "/" ? "font-bold" : ""}`} to={"/"}>{t("mainpage")}</Link>
           </li>
           <li className=" w-24 text-center">
-            <Link className={` ${navNavPathname == "/boglanish" ? "font-bold" : ""}`} to={"boglanish"}>Bog'lanish</Link>
+            <Link className={` ${navNavPathname == "/boglanish" ? "font-bold" : ""}`} to={"boglanish"}>{t("contact")}</Link>
           </li>
           <li className=" w-24 text-center">
-            <Link className={` ${navNavPathname == "/paketlar" ? "font-bold" : ""}`} to={"paketlar"} >Paketlar</Link>
+            <Link className={` ${navNavPathname == "/paketlar" ? "font-bold" : ""}`} to={"paketlar"} >{t("pakets")}</Link>
           </li>
           <li className=" w-28 text-center">
-            <Link className={` ${navNavPathname == "/biz-haqimizda" ? "font-bold" : ""}`} to={"biz-haqimizda"}>Biz haqimizda</Link>
+            <Link className={` ${navNavPathname == "/biz-haqimizda" ? "font-bold" : ""}`} to={"biz-haqimizda"}>{t("aboutus")}</Link>
           </li>
 
           {user ? <>
