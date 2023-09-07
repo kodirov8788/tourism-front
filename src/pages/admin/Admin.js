@@ -124,14 +124,7 @@ function Admin() {
                                         <button onClick={() => Delete(client._id)} class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete client</button>
                                     </td>
                                     <td class="px-6 py-4">
-
-
-                                        <div className="">
-                                            <h1>{client.trip?.text}</h1>
-                                        </div>
-
-
-
+                                        {client.trip?.text}
                                     </td>
 
                                 </tr>
