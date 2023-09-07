@@ -10,8 +10,5 @@ module.exports = {
         'bgimage': "url('./images/bg-image.jpg')"
       }
     }
-  },
-  plugins: [
-    require('flowbite/plugin')
-  ]
+  }
 }

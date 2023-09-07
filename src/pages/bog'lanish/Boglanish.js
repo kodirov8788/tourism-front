@@ -102,7 +102,7 @@ function Boglanish() {
                     Elektron pochta manzili(email)*
                   </h1>
                   <div className=" w-1/2 h-[30px] mb-[15px]   ">
-                    <input value={userData.email} className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="email" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, email: e.target.value })} />
+                    <input value={userData.email} className='border-b-2 border-b-[#000] h-full w-full outline-none' type="email" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, email: e.target.value })} />
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ function Boglanish() {
                     Telefon raqam(mobile number)
                   </h1>
                   <div className=" w-1/2 h-[30px] mb-[15px]   ">
-                    <input value={userData.number} className=' border-b-2 border-b-[#000] h-full w-full outline-none' type="number" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, number: e.target.value })} />
+                    <input value={userData.number} className='border-b-2 border-b-[#000] h-full w-full outline-none' type="number" placeholder='Мой ответ' onChange={(e) => setUserData({ ...userData, number: e.target.value })} />
                   </div>
                 </div>
 
