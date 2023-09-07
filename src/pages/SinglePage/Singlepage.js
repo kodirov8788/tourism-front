@@ -163,7 +163,7 @@ function Singlepage() {
         />
 
         <button className="border text-lg bg-blue-500 text-white px-3 py-2  rounded active:scale-95 mt-3">
-          Malumotni jo`natish
+          Belet bron qilish
         </button>
       </form>
       <div className="w-4/5 md:w-2/5 text-lg flex items-center justify-around md:text-lg">
@@ -173,6 +173,7 @@ function Singlepage() {
           <option value="humo">Humo</option>
           <option value="uzcard">Uzcard</option>
         </select>
+
         <button onClick={() => redirectToPaymentPage()} className='border text-lg bg-blue-500 text-white px-3 py-2 my-4 rounded active:scale-95' type='button'>to'lov qilish</button>
 
       </div>
