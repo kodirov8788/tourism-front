@@ -37,8 +37,10 @@ import paketlar_img22 from "./Paketlar_img/paketlar_img22.jpg";
 import paketlar_img23 from "./Paketlar_img/paketlar_img23.jpg";
 import { Turistik_paketlar } from "../../static_data";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Paketlar() {
+  const {  t} = useTranslation();
   return (
     <div className="bg-[#D5E4D9] ">
       {/* Main qismi */}
@@ -49,7 +51,7 @@ function Paketlar() {
           alt=""
         />
         <h1 className="z-20 text-[42px] font-bold tracking-[2px] text-[#1C1C1C]">
-          Paketlar
+        {t("paketlar_main")}
         </h1>
       </div>
       {/* Main qismi */}
@@ -80,7 +82,7 @@ function Paketlar() {
       {/*shaharlar  */}
 
       <div className="w-[100%] h-[100px] flex items-center justify-center bg-[#387B5B] text-[24px] font-bold text-white">
-        <h1>Dunyoning ko'plab shaharlariga sayohatlar</h1>
+        <h1>{t("paketlar_sayohat")}</h1>
       </div>
 
       {/* Slider qismi */}
@@ -261,7 +263,7 @@ function Paketlar() {
       {/* Footer qismi */}
       <div className="w-[100%] h-[150px] p-[50px]">
         <div className="w-[100%] h-[100px] flex items-center justify-center  text-[16px] font-normal text-[#1c1c1c]  border-t-2 border-slate-300 ">
-          <h1>Al-Rashid Tourism 2023</h1>{" "}
+          <h1>{t("footer_compania")}</h1>{" "}
         </div>
       </div>
     </div>

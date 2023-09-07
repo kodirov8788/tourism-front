@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 function Header() {
 
   const data = [{ id: 0, label: "UZB" }, { id: 1, label: "RUS" }, { id: 2, label: "ENG" }, { id: 3, label: "ARAB" }];
-  const { i18n } = useTranslation();
+  const { i18n ,t} = useTranslation();
   const [selectedItem, setSelectedItem] = useState(data[0]);
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -36,10 +36,10 @@ function Header() {
         {/* <Language /> */}
         <div className="text-center z-10">
           <h1 className="text-white text-2xl font-semibold">
-            Birgalikida orzular sari
+           {t("together")} 
           </h1>
           <h2 className="text-white  font-semibold">
-            Dunyoning istalgan burchagiga biz orqali sayohat <br /> qiling
+            {t("maintitle")}
           </h2>
         </div>
       </div>

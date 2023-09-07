@@ -4,8 +4,10 @@ import { FaCloud } from "react-icons/fa6";
 import axios from '../../api/Axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+import { useTranslation } from 'react-i18next';
 
 function Boglanish() {
+  const {  t} = useTranslation();
   const navigate = useNavigate()
   let { setIsLoading } = useContext(AuthContext)
   const [userData, setUserData] = useState({
@@ -56,9 +58,9 @@ function Boglanish() {
 
       <div className="w-full h-[40vh] bg-bgimage bg-cover  bg-center relative flex items-center justify-center ">
         <div className="w-full h-full bg-black/30 absolute left-0 top-0">
-
+        
         </div>
-        <h1 className='text-center text-white text-3xl md:text-5xl font-bold z-20'>Biz bilan bog'lanish</h1>
+        <h1 className='text-center text-white text-3xl md:text-5xl font-bold z-20'>{t("boglanish_text")}</h1>
 
       </div>
       {/* main */}
@@ -147,7 +149,7 @@ function Boglanish() {
 
 
             <div className="w-full pl-4 font-sans ">
-              <div className='py-[15px] text-[#387B5B] font-bold md:h-[70px] md:mt-[20px]' >Manzil: <a className='text-[#000]' href="https://www.google.com/maps/place/Al-Rashid+Tourism/@41.0005628,71.6133343,20.83z/data=!4m6!3m5!1s0x38bb4b68b99c130b:0xc6581409a3657f2d!8m2!3d41.0006275!4d71.6136595!16s%2Fg%2F11krbpw042?hl=ru&entry=tts&shorturl=1">Namangan sh. 6-mkr Sanoat ko'chasi 5-uy</a> </div>
+              <div className='py-[15px] text-[#387B5B] font-bold md:h-[70px] md:mt-[20px]' >{t("boglanish_address")}<a className='text-[#000]' href="https://www.google.com/maps/place/Al-Rashid+Tourism/@41.0005628,71.6133343,20.83z/data=!4m6!3m5!1s0x38bb4b68b99c130b:0xc6581409a3657f2d!8m2!3d41.0006275!4d71.6136595!16s%2Fg%2F11krbpw042?hl=ru&entry=tts&shorturl=1">{t("boglanish_addres")}</a> </div>
 
               <div className="">
                 <p>O'zbekcha/Руский +998917580093 +998972160093</p>
@@ -183,7 +185,7 @@ function Boglanish() {
 
         <div className='w-full  mt-[-10px] '>
           <div className='w-full '>
-            <button className='h-[100px] w-full bg-[#387B5B] text-[#fff] sm:text-xl'>Onlayn to'lov turlari</button>
+            <button className='h-[100px] w-full bg-[#387B5B] text-[#fff] sm:text-xl'>{t("boglanish_tolov")}</button>
           </div>
 
 

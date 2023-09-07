@@ -2,5 +2,44 @@
   "mainpage": "Main page",
   "contact": "Contact us",
   "pakets": "Packages",
-  "aboutus": "About us"
+  "aboutus": "About us",
+  "together":"Towards dreams together",
+  "maintitle":"Travel anywhere in the world with us",
+  "maintext":"About us",
+  "maintext_h1":"Al-Rashid Tourism is an Uzbek-Arab company located in the city of Namangan, operating in the field of tourism in  Uzbekistan, and is a branch of the company Smart Solution for Business Men Services in Dubai / United Arab Emirates. We provide employment services outside Uzbekistan, any type of visa and residence for the Gulf countries,international and local tourist trips, booking tickets to any destination in the world on board all airlines.",
+  "xizmatlar_text":"Services",
+  "xizmatlar_viza":"visa services",
+  "xizmatlar_sayohat":"Organize a trip",
+  "xizmatlar_avia":"Book air tickets",
+  "xizmatlar_gid":"provide a tourrist guides",
+  "xizmatlar_ijara":"Rent car ",
+  "xizmatlar_taom":"Resturant reservation",
+  "xizmatlar_hotel":"Booking hotels and commidation",
+  "xizmatlar_transport":"Transportation and other services",
+  "turistik_text":"Tourist packages",
+  "boglanish_text":"contact us",
+  "boglanish_galeriya":"Galerey",
+  "boglanish_address":"Address:",
+  "boglanish_addres":"Uzbekistan-Namangan-industrial street no.5",
+  "boglanish_tolov":"Types of online payment",
+  "footer_text":"Enter the amount!",
+  "footer_izoh":"comment",
+  "footer_miqdor":"quantity",
+  "footer_card":"Choose the type of payment card!",
+  "footer_submit":"Payment",
+  "footer_card_turi":"Types of payment",
+  "footer_compania":"Al-Rashid Tourism 2023",
+  "paketlar_main":"Tourist packages",
+  "paketlar_sayohat":"Trips to many cities around the world",
+  "bizhaqimizda_main":"About us",
+  "bizhaqimizda_text":"Contacts"
+
+
+
+
+
+
+
+
+
 }

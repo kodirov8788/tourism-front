@@ -16,6 +16,7 @@ import Img5 from "./images/image-13.jpg"
 import Img6 from "./images/image-9.jpg"
 import Img7 from "./images/image-1.jpg"
 import Img8 from "./images/image-21.jpg"
+import { useTranslation } from "react-i18next"
 
 export const Turistik_paketlar = [
     {

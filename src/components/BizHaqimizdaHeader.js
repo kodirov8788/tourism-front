@@ -1,30 +1,23 @@
 import React from "react";
 import WhatsApp from "../images/whatsapp.png";
 import Telegram from "../images/telegram.png";
-
+import { useTranslation } from "react-i18next";
 function BizHaqimizdaHeader() {
+  const {  t} = useTranslation();
   return (
     <div className="">
       <div className="bizHaqimizda flex justify-center items-center">
         <h1 className="text-4xl text-white font-bold font-sans">
-          Biz haqimizda
+        {t("bizhaqimizda_main")}
         </h1>
       </div>
-      <div className="bg-[rgb(27,69,87)] text-white flex justify-center py-10">
-        <h1 className="text-2xl font-bold">
-          "Al-Rashid Tourism" M.CH.J. Namangan shahrida joylashgan, O'zbekiston
-          hududida turizm <br /> sohasida faoliyat yurituvchi O'zbek-Arab
-          kompaniyasi bo'lib, Dubay / Birlashgan Arab <br /> Amirliklaridagi
-          "Smart Solution for Business Men Services" kompaniyasining filiali{" "}
-          <br /> hisoblanadi. O'zbekiston ichida va undan tashqarida bandlik
-          xizmatlarini, Ko'rfaz <br />
-          mamlakatlari uchun istalgan turdagi vizalar va yashash joylarini,
-          barcha aviakompaniyalar <br /> bortlarida dunyoning turli
-          burchaklariga chiptalarni bron qilishni ta'minlaymiz.{" "}
+      <div className="bg-[rgb(27,69,87)] text-white flex justify-center py-10 p-10">
+        <h1 className="text-2xl font-bold text-center">
+        {t("maintext_h1")}
         </h1>
       </div>
       <div className="bg-[rgb(56,123,91)] py-10 text-center">
-        <h1 className="text-2xl text-white font-bold">Murojat uchun</h1>
+        <h1 className="text-2xl text-white font-bold">{t("bizhaqimizda_text")}</h1>
       </div>
       <div className="bg-[rgb(213,228,217)]">
         <div className="flex-wrap flex items-center gap-32 justify-center py-6">
@@ -47,7 +40,7 @@ function BizHaqimizdaHeader() {
       </div>
       <div className="bg-[rgb(56,123,91)] py-10 text-center">
         <a className="text-lg underline cursor-pointer text-white font-extralight">
-          Bizning manzil: Namangan sh. 6-mkr sanoat ko'chasi 5-uy
+        {t("boglanish_address")}{t("boglanish_addres")}
         </a>
       </div>
       <div className="flex justify-center bg-[rgb(213,228,217)]">
@@ -61,7 +54,7 @@ function BizHaqimizdaHeader() {
       </div>
       <footer className="bg-[rgb(213,228,217)] h-20">
         <hr className="text-[rgb(181,194,185)] w-[1200px] ml-40" />
-        <p className="text-[rgb(76,79,101)] text-[12px] text-center my-7">Al-Rashid Tourism 2023</p>
+        <p className="text-[rgb(76,79,101)] text-[12px] text-center my-7">{t("footer_compania")}</p>
       </footer>
     </div>
   );
