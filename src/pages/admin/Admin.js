@@ -89,6 +89,9 @@ function Admin() {
                             <th scope="col" class="px-6 py-3">
                                 Delete
                             </th>
+                            <th scope="col" class="px-6 py-3">
+                                Bron Datails
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -120,6 +123,17 @@ function Admin() {
                                     <td class="px-6 py-4">
                                         <button onClick={() => Delete(client._id)} class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete client</button>
                                     </td>
+                                    <td class="px-6 py-4">
+
+
+                                        <div className="">
+                                            <h1>{client.trip?.text}</h1>
+                                        </div>
+
+
+
+                                    </td>
+
                                 </tr>
                             ))
                         }
