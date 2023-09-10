@@ -57,7 +57,7 @@ export const AuthContextProvider = ({ children }) => {
     getLang()
 
 
-  }, [selectedItem, lg])
+  }, [selectedItem])
 
   let data = {
     ...state, dispatch, isLoading, setIsLoading, sensor, setSensor, language, setSelectedItem, selectedItem
