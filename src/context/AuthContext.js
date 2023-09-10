@@ -32,13 +32,13 @@ export const AuthContextProvider = ({ children }) => {
   // console.log('AuthContext state:', state)
   const language = [{ id: 0, label: "UZB" }, { id: 1, label: "RUS" }, { id: 2, label: "ENG" }, { id: 3, label: "ARAB" }];
 
-  const [selectedItem, setSelectedItem] = useState(language[0]);
+  const [selectedItem, setSelectedItem] = useState(language[1]);
 
   useEffect(() => {
     const getLang = () => {
       let lg = window.localStorage.getItem("i18nextLng")
       if (selectedItem.label !== lg) {
-        let lan = language.find(li => li.label === lg.slice(0, 2))
+        let lan = language.find(li => li.label === lg)
         setSelectedItem(lan)
       }
       console.log("lang:", lg)
