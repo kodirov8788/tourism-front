@@ -51,7 +51,7 @@ export const AuthContextProvider = ({ children }) => {
         setSelectedItem(lg)
       }
 
-      console.log("lang:", lg)
+      // console.log("lang:", lg)
 
     }
     getLang()
