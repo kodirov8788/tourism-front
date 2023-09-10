@@ -32,20 +32,32 @@ export const AuthContextProvider = ({ children }) => {
   // console.log('AuthContext state:', state)
   const language = [{ id: 0, label: "UZB" }, { id: 1, label: "RUS" }, { id: 2, label: "ENG" }, { id: 3, label: "ARAB" }];
 
-  const [selectedItem, setSelectedItem] = useState(language[1]);
+  const [selectedItem, setSelectedItem] = useState(language[0]);
+  let lg = window.localStorage.getItem("i18nextLng")
 
   useEffect(() => {
     const getLang = () => {
-      let lg = window.localStorage.getItem("i18nextLng")
+
+      // setTimeout(() => {
+      //   let lg = window.localStorage.getItem("i18nextLng")
+      //   setSelectedItem(lg)
+      // }, 500);
+
+      // let lg = window.localStorage.getItem("i18nextLng")
       if (selectedItem.label !== lg) {
         let lan = language.find(li => li.label === lg)
         setSelectedItem(lan)
+      } else {
+        setSelectedItem(lg)
       }
+
       console.log("lang:", lg)
 
     }
     getLang()
-  }, [])
+
+
+  }, [selectedItem, lg])
 
   let data = {
     ...state, dispatch, isLoading, setIsLoading, sensor, setSensor, language, setSelectedItem, selectedItem

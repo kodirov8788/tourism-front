@@ -1,20 +1,12 @@
 import React, { useContext, useState } from "react";
-import Language from "../language/Language";
 import { useTranslation } from "react-i18next";
 import { AuthContext } from "../context/AuthContext";
 
 function Header() {
-  const { language, setSelectedItem, selectedItem } = useContext(AuthContext)
+  const { language, setSelectedItem } = useContext(AuthContext)
   const { i18n, t } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-
-    setTimeout(() => {
-      let lg = window.localStorage.getItem("i18nextLng")
-      setSelectedItem(lg)
-    }, 500);
-
-
   };
   return (
     <div className="backdrop-blur-md bg-black/25 w-[100%] h-[50vh]">
