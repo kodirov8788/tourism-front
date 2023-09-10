@@ -33,7 +33,6 @@ export const AuthContextProvider = ({ children }) => {
   const language = [{ id: 0, label: "UZB" }, { id: 1, label: "RUS" }, { id: 2, label: "ENG" }, { id: 3, label: "ARAB" }];
 
   const [selectedItem, setSelectedItem] = useState(language[0]);
-  let lg = window.localStorage.getItem("i18nextLng")
 
   useEffect(() => {
     const getLang = () => {
@@ -43,7 +42,7 @@ export const AuthContextProvider = ({ children }) => {
       //   setSelectedItem(lg)
       // }, 500);
 
-      // let lg = window.localStorage.getItem("i18nextLng")
+      let lg = window.localStorage.getItem("i18nextLng")
       if (selectedItem.label !== lg) {
         let lan = language.find(li => li.label === lg)
         setSelectedItem(lan)
