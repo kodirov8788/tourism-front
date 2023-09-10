@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Language from "../language/Language";
 import { useTranslation } from "react-i18next";
+import { AuthContext } from "../context/AuthContext";
 
 function Header() {
-
-  const data = [{ id: 0, label: "UZB" }, { id: 1, label: "RUS" }, { id: 2, label: "ENG" }, { id: 3, label: "ARAB" }];
-  const { i18n ,t} = useTranslation();
-  const [selectedItem, setSelectedItem] = useState(data[0]);
+  const { language, setSelectedItem, selectedItem } = useContext(AuthContext)
+  const { i18n, t } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
 
@@ -26,7 +25,7 @@ function Header() {
           className="w-36 h-10 text-center bg-transparent border-b-2 border-red-700 text-red-700 z-10"
         >
           {
-            data.map(lang => (
+            language.map(lang => (
               <option key={lang.id} className="text-red-700" value={lang.label}>
                 {lang.label}
               </option>
@@ -36,7 +35,7 @@ function Header() {
         {/* <Language /> */}
         <div className="text-center z-10">
           <h1 className="text-white text-2xl font-semibold">
-           {t("together")} 
+            {t("together")}
           </h1>
           <h2 className="text-white  font-semibold">
             {t("maintitle")}

@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { useTranslation } from 'react-i18next';
 
 function Boglanish() {
-  const {  t} = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate()
   let { setIsLoading } = useContext(AuthContext)
   const [userData, setUserData] = useState({
@@ -17,7 +17,7 @@ function Boglanish() {
     number: "",
     commit: ""
   })
-  console.log(userData)
+  // console.log(userData)
 
   const ClearForm = () => {
     return setUserData({
@@ -58,7 +58,7 @@ function Boglanish() {
 
       <div className="w-full h-[40vh] bg-bgimage bg-cover  bg-center relative flex items-center justify-center ">
         <div className="w-full h-full bg-black/30 absolute left-0 top-0">
-        
+
         </div>
         <h1 className='text-center text-white text-3xl md:text-5xl font-bold z-20'>{t("boglanish_text")}</h1>
 
