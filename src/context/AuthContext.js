@@ -30,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [])
 
   // console.log('AuthContext state:', state)
-  const language = [{ id: 0, label: "uz" }, { id: 1, label: "ru" }, { id: 2, label: "en" }, { id: 3, label: "ar" }];
+  const language = [{ id: 0, label: "uz", title: "UZB" }, { id: 1, label: "ru", title: "RUS" }, { id: 2, label: "en", title: "ENG" }, { id: 3, label: "ar", title: "ARAB" }];
 
   const [selectedItem, setSelectedItem] = useState(language[0]);
 

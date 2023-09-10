@@ -19,7 +19,7 @@ function Header() {
           {
             language.map(lang => (
               <option key={lang.id} className="text-red-700" value={lang.label}>
-                {lang.label}
+                {lang.title}
               </option>
             ))
           }
