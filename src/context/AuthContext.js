@@ -30,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [])
 
   // console.log('AuthContext state:', state)
-  const language = [{ id: 0, label: "UZB" }, { id: 1, label: "RUS" }, { id: 2, label: "ENG" }, { id: 3, label: "ARAB" }];
+  const language = [{ id: 0, label: "uz" }, { id: 1, label: "ru" }, { id: 2, label: "en" }, { id: 3, label: "ar" }];
 
   const [selectedItem, setSelectedItem] = useState(language[0]);
 
@@ -56,7 +56,7 @@ export const AuthContextProvider = ({ children }) => {
     getLang()
 
 
-  }, [selectedItem])
+  }, [])
 
   let data = {
     ...state, dispatch, isLoading, setIsLoading, sensor, setSensor, language, setSelectedItem, selectedItem
