@@ -8,8 +8,9 @@ import Img6 from "../images/IMAGE-19.jpg";
 import Img7 from "../images/image-4.jpg";
 import Img8 from "../images/image-3.jpg";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 function Xizmatlar() {
-  const {  t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -18,50 +19,51 @@ function Xizmatlar() {
       </div>
       <div className="bg-[rgb(56,123,91)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img1} alt="" />
-        <h1 className="text-3xl underline text-white mt-7">{t("xizmatlar_viza")}
-        </h1>
+        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-white mt-7">{t("xizmatlar_viza")}
+        </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img2} alt="" />
-        <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
-        {t("xizmatlar_sayohat")}
+        <Link to={"/boglanish"}>    <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+          {t("xizmatlar_sayohat")}
         </h1>
+        </Link>
       </div>
       <div className="bg-[rgb(27,69,87)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img3} alt="" />
-        <h1 className="text-3xl underline text-[rgb(213,228,217)] mt-7">
-        {t("xizmatlar_avia")}
-        </h1>
+        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-[rgb(213,228,217)] mt-7">
+          {t("xizmatlar_avia")}
+        </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img4} alt="" />
-        <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
-        {t("xizmatlar_gid")}
-        </h1>
+        <Link to={"/boglanish"}>  <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+          {t("xizmatlar_gid")}
+        </h1></Link>
       </div>
       <div className="bg-[rgb(56,123,91)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img5} alt="" />
-        <h1 className="text-3xl underline text-[#F9F9F9] mt-7">
-        {t("xizmatlar_ijara")}
-        </h1>
+        <Link to={"/boglanish"}>  <h1 className="text-3xl underline text-[#F9F9F9] mt-7">
+          {t("xizmatlar_ijara")}
+        </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img6} alt="" />
-        <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
-        {t("xizmatlar_taom")}
-        </h1>
+        <Link to={"/boglanish"}> <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+          {t("xizmatlar_taom")}
+        </h1></Link>
       </div>
       <div className="bg-[rgb(27,69,87)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img7} alt="" />
-        <h1 className="text-3xl underline text-[rgb(213,228,209)] mt-7">
-        {t("xizmatlar_hotel")}
-        </h1>
+        <Link to={"/boglanish"}> <h1 className="text-3xl underline text-[rgb(213,228,209)] mt-7">
+          {t("xizmatlar_hotel")}
+        </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img8} alt="" />
-        <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
-        {t("xizmatlar_transport")}
-        </h1>
+        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+          {t("xizmatlar_transport")}
+        </h1></Link>
       </div>
     </div>
   );
