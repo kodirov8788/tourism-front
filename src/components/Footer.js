@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Img from "../images/image-14.jpg"
 import { useTranslation } from 'react-i18next';
 import { AuthContext } from '../context/AuthContext';
+import Logo from "../images/alrashid.png"
 const Footer = () => {
   let { setIsLoading } = useContext(AuthContext)
   const { t } = useTranslation();
@@ -64,7 +65,11 @@ const Footer = () => {
           <img className='w-20 h-20' src={Img} alt="" />
         </div>
       </div>
-      <p className='text-center text-white lg:text-md '>{t("footer_compania")}</p>
+      <div className=" flex flex-col items-center justify-center text-white lg:text-md">
+        <img className='w-[70px] mr-3' src={Logo} alt="" />
+        <p className=' '>{t("footer_compania")}</p>
+
+      </div>
 
     </div>
   )

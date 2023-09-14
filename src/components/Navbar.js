@@ -4,6 +4,7 @@ import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useAuthContext } from "../hooks/useAuthContext";
 import axios from "../api/Axios";
+import Logo from "../images/alrashid.png"
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
@@ -65,16 +66,16 @@ function Navbar() {
             <AiOutlineClose className="text-white cursor-pointer  ml-5" onClick={() => showModal()} />
             <ul>
               <li className="mt-5 ml-5">
-                <Link to={"/"}>Bosh Sahifa</Link>
+                <Link to={"/"}>{t("mainpage")}</Link>
               </li>
               <li className="mt-5 ml-5">
-                <Link to={"boglanish"}>Bog'lanish</Link>
+                <Link to={"boglanish"}>{t("contact")}</Link>
               </li>
               <li className="mt-5 ml-5">
-                <Link to={"paketlar"}>Paketlar</Link>
+                <Link to={"paketlar"}>{t("pakets")}</Link>
               </li>
               <li className="mt-5 ml-5">
-                <Link to={"biz-haqimizda"}>Biz haqimizda</Link>
+                <Link to={"biz-haqimizda"}>{t("aboutus")}</Link>
               </li>
 
               {user ? <>
@@ -99,9 +100,10 @@ function Navbar() {
             className="lg:hidden flex cursor-pointer"
             onClick={() => showModal()}
           />
-          <h1 className="text-xl font-[Montserrat] font-light">
+          {/* <h1 className="text-xl font-[Montserrat] font-light">
             AI-Rashid Tourism
-          </h1>
+          </h1> */}
+          <img className="w-[70px]" src={Logo} alt="" />
         </div>
         <ul className="lg:flex hidden items-center gap-3">
           <li className=" w-24 text-center">
