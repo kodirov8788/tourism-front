@@ -79,6 +79,8 @@ function Singlepage() {
         position: toast.POSITION.TOP_RIGHT
       });
     } else {
+      setIsLoading(true)
+
       const merchantId = '21689';
       const serviceId = '29374';
       const transactionParam = data.text;
@@ -89,6 +91,11 @@ function Singlepage() {
       console.log(paymentUrl)
       // Redirect the user to the payment page
       window.location.href = paymentUrl;
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 30000);
+
+
     }
   };
 

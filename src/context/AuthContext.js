@@ -36,12 +36,6 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const getLang = () => {
-
-      // setTimeout(() => {
-      //   let lg = window.localStorage.getItem("i18nextLng")
-      //   setSelectedItem(lg)
-      // }, 500);
-
       let lg = window.localStorage.getItem("i18nextLng")
       if (selectedItem.label !== lg) {
         let lan = language.find(li => li.label === lg)
@@ -49,13 +43,8 @@ export const AuthContextProvider = ({ children }) => {
       } else {
         setSelectedItem(lg)
       }
-
-      // console.log("lang:", lg)
-
     }
     getLang()
-
-
   }, [])
 
   let data = {

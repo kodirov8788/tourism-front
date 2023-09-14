@@ -9,6 +9,7 @@ import './language/i18n';
 import { ToastContainer } from 'react-toastify';
 import { AuthContextProvider } from './context/AuthContext';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from './components/Footer';
 
 
 
@@ -20,6 +21,7 @@ root.render(
         <Navbar />
         <ToastContainer />
         <App />
+        <Footer />
       </BrowserRouter>
     </AuthContextProvider>
 

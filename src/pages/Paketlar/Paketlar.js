@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Navigation,
   Pagination,
@@ -38,10 +38,15 @@ import paketlar_img23 from "./Paketlar_img/paketlar_img23.jpg";
 import { Turistik_paketlar } from "../../static_data";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { AuthContext } from "../../context/AuthContext";
 
 function Paketlar() {
-  const {  t} = useTranslation();
+  const { language, selectedItem } = useContext(AuthContext)
+  const { t } = useTranslation();
+  let lang = window.localStorage.getItem("i18nextLng")
+
   return (
+
     <div className="bg-[#D5E4D9] ">
       {/* Main qismi */}
       <div className="w-[100%] h-[340px] relative flex items-center justify-center font-sans">
@@ -51,7 +56,7 @@ function Paketlar() {
           alt=""
         />
         <h1 className="z-20 text-[42px] font-bold tracking-[2px] text-[#1C1C1C]">
-        {t("paketlar_main")}
+          {t("paketlar_main")}
         </h1>
       </div>
       {/* Main qismi */}
@@ -70,7 +75,9 @@ function Paketlar() {
           <div className="text-center sm:w-[100%] sm:h-[183px] sm:flex sm:flex-col sm:justify-center md:p-0  sm:pl-5">
             <Link to={`${paket.id}`}>
               <h1 className="sm:text-[40px] text-[#1B4557] sm:font-bold sm:underline sm:leading-[100px]">
-                {paket.text}
+                {lang === "ru" ? paket.text_ru
+                  : lang === "en" ? paket.text_en
+                    : lang === "ar" ? paket.text_ar : paket.text_uz}
               </h1>
               <p className="sm:text-[18px] text-[#1B4557] sm:font-semibold">
                 {paket.price}

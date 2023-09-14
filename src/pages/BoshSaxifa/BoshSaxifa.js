@@ -8,7 +8,7 @@ import Xizmatlar from "../../components/Xizmatlar";
 import Boglanish from '../bog\'lanish/Boglanish';
 import { useTranslation } from 'react-i18next';
 function BoshSaxifa() {
-  const {  t} = useTranslation();
+  const { t } = useTranslation();
   return (
     <div>
       <Header />
@@ -23,7 +23,6 @@ function BoshSaxifa() {
         <h1 className='text-white font-bold text-2xl md:text-4xl tracking-[5px]'>{t("boglanish_text")}</h1>
       </div>
       <Boglanish />
-      <Footer />
     </div>
   )
 }
