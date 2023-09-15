@@ -19,49 +19,49 @@ function Xizmatlar() {
       </div>
       <div className="bg-[rgb(56,123,91)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img1} alt="" />
-        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-white mt-7">{t("xizmatlar_viza")}
+        <Link to={"/boglanish"}>   <h1 className=" text-3xl underline text-white mt-7 w-11/12    m-auto text-center md:w-full">{t("xizmatlar_viza")}
         </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img2} alt="" />
-        <Link to={"/boglanish"}>    <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+        <Link to={"/boglanish"}>    <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7 w-11/12   m-auto text-center md:w-full">
           {t("xizmatlar_sayohat")}
         </h1>
         </Link>
       </div>
       <div className="bg-[rgb(27,69,87)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img3} alt="" />
-        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-[rgb(213,228,217)] mt-7">
+        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-[rgb(213,228,217)] mt-7 w-11/12 m-auto text-center md:w-full">
           {t("xizmatlar_avia")}
         </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img4} alt="" />
-        <Link to={"/boglanish"}>  <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+        <Link to={"/boglanish"}>  <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7 w-11/12 m-auto text-center md:w-full">
           {t("xizmatlar_gid")}
         </h1></Link>
       </div>
       <div className="bg-[rgb(56,123,91)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img5} alt="" />
-        <Link to={"/boglanish"}>  <h1 className="text-3xl underline text-[#F9F9F9] mt-7">
+        <Link to={"/boglanish"}>  <h1 className="text-3xl underline text-[#F9F9F9] mt-7 w-11/12 m-auto text-center md:w-full">
           {t("xizmatlar_ijara")}
         </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img6} alt="" />
-        <Link to={"/boglanish"}> <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+        <Link to={"/boglanish"}> <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7 w-11/12 m-auto text-center md:w-full">
           {t("xizmatlar_taom")}
         </h1></Link>
       </div>
       <div className="bg-[rgb(27,69,87)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img7} alt="" />
-        <Link to={"/boglanish"}> <h1 className="text-3xl underline text-[rgb(213,228,209)] mt-7">
+        <Link to={"/boglanish"}> <h1 className="text-3xl underline text-[rgb(213,228,209)] mt-7 w-11/12 m-auto text-center md:w-full">
           {t("xizmatlar_hotel")}
         </h1></Link>
       </div>
       <div className="bg-[rgb(213,228,217)] sm:pl-20 xl:flex py-6 xl:pl-40 gap-9">
         <img className="w-[548px] h-[308px]" src={Img8} alt="" />
-        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7">
+        <Link to={"/boglanish"}>   <h1 className="text-3xl underline text-[rgb(27,69,87)] mt-7 w-11/12 m-auto text-center md:w-full">
           {t("xizmatlar_transport")}
         </h1></Link>
       </div>

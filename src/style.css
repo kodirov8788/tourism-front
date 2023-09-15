@@ -23,7 +23,7 @@
 
 .bizHaqimizda {
   background: url("./images/BizHaqimizda.jpg") no-repeat;
-  width: 100%;
+  /* width: 100%; */
   background-size: cover;
   height: 32vh;
   background-position: center;

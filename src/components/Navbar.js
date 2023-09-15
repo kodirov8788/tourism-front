@@ -56,7 +56,7 @@ function Navbar() {
 
   return (
     <div className={`fixed top-0 z-30 left-0 w-full duration-300 bg-transparent ${bgColor ? "" : "bg-black/100"} `}>
-      <nav className="w-full h-14 px-6 flex justify-between items-center text-white">
+      <nav className="w-full h-14 px-6 flex justify-between  items-center text-white">
 
         <div className={`${modal ? "translate-x-0" : "translate-x-[-3000px]"} w-full duration-300  bg-black/50 h-screen   absolute left-0 top-0 overflow-hidden`}>
 
@@ -95,17 +95,17 @@ function Navbar() {
 
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center w-full gap-5   justify-between">
           <GiHamburgerMenu
-            className="lg:hidden flex cursor-pointer"
+            className=" flex lg:hidden cursor-pointer"
             onClick={() => showModal()}
           />
-          {/* <h1 className="text-xl font-[Montserrat] font-light">
+          <h1 className="text-xl block md:hidden font-[Montserrat] font-light">
             AI-Rashid Tourism
-          </h1> */}
-          <img className="w-[70px]" src={Logo} alt="" />
+          </h1>
+          <Link to={"/"}><img className="w-[70px] " src={Logo} alt="" /></Link>
         </div>
-        <ul className="lg:flex hidden items-center gap-3">
+        <ul className=" hidden lg:flex items-center gap-3">
           <li className=" w-24 text-center">
             <Link className={` ${navNavPathname == "/" ? "font-bold" : ""}`} to={"/"}>{t("mainpage")}</Link>
           </li>
