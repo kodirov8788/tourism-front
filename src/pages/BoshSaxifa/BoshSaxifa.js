@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from "../../components/Footer";
 import Slider from "../../components/Slider";
 import Turistik from "../../components/Turistik";
 import Header from "../../components/Header";
