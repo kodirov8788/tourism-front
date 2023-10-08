@@ -113,7 +113,7 @@ function Singlepage() {
         alt=""
       />
       <h1 className="bg-blue-400 text-white w-4/5 text-center text-2xl p-3 m-2">
-        {data?.text}
+        {data?.text_uz}
       </h1>
       <h2 className="bg-blue-400 text-white w-4/5 text-center text-2xl p-3 m-2">
         {data?.price}
